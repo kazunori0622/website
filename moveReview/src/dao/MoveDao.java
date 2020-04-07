@@ -64,7 +64,7 @@ public class MoveDao {
 			conn = DBManager.getConnection();
 
 			// SELECT文を準備
-        	String sql = "SELECT * FROM move WHERE production_date > (NOW() - INTERVAL 1 MONTH) ORDER BY box_office DESC LIMIT ?";
+        	String sql = "SELECT * FROM move WHERE production_date > (NOW() - INTERVAL 3 MONTH) ORDER BY box_office DESC LIMIT ?";
 
         	// SELECTを実行し、結果表を取得
         	PreparedStatement pStmt = conn.prepareStatement(sql);
